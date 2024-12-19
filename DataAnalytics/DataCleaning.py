@@ -2,8 +2,8 @@ import pandas as pd
 
 # Important working with data-frames
 # 1) Import a csv file
-df = pd.read_csv("C:/Users/ssj55/Downloads/data.csv") 
-d1 = pd.read_csv("C:/Users/ssj55/Downloads/data.csv",usecols=['carat', 'cut'])   # Import sepcific columns
+df = pd.read_csv("D:/PythonProjects/DataAnalytics/DataAnalytics/files/data.csv") 
+d1 = pd.read_csv("D:/PythonProjects/DataAnalytics/DataAnalytics/files/data.csv",usecols=['carat', 'cut'])   # Import sepcific columns
 
 
 # 2) Exploring data-set
