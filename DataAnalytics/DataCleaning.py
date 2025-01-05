@@ -16,7 +16,7 @@ df.info()       # memory footprint and datatypes
 
 # 3) Add a new column to a dataset
 df['price_rupee'] = df.price * 60
-
+df['price_rupee']
 # 4) Filtering data-frames with conditional logic
 filtered_data = df[df.cut == 'Premium']
 
