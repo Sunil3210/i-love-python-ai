@@ -6,6 +6,7 @@ Created on Sun Jan  5 14:35:55 2025
 """
 import numpy as np
 from math import sqrt
+import matplotlib.pyplot as plt
 def rmse_metrics(actual,predicted):
     predicted_error=0
     n=len(actual)
@@ -33,7 +34,9 @@ def compute_coefficient(x,y):
 def predicted(x,w0,w1):
     return x*w1+w0 #y=x1*w1+x2*w2+x3*w3+......+xn*wn+w0
 
-
+def evaluate_OLS(y,y_hat):
+    mse=np.mean((y-y_hat)**2)
+    return mse,sqrt(mse)
 x = np.arange(1, 51)
 y = x*3+5
 
@@ -42,7 +45,16 @@ y[np.random.randint(0, len(y), size=10)] += np.random.randint(-5, 5)
 
 w1, w0 = compute_coefficient(x, y)
 y_hat = predicted(x,w1,w0)
-print("y_hat",y_hat)
+data=evaluate_OLS(y, y_hat)
+print("data",data)
 # display the value of predicted coefficients
 print(w1,w0)
+
+plt.scatter(x, y, label='Observed Value')
+plt.plot(x, y_hat, label='Predicted Value', color='red')
+plt.xlabel('<--X-Axis-->')
+plt.ylabel('<--Y-Axis-->')
+plt.legend()
+plt.show()
+
 
