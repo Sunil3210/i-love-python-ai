@@ -61,7 +61,7 @@ def run_gradient_descent(X,Y,alpha,max_iterations,stopping_threshold = 1e-6):
   return w0,w1,cost_history
             
 learning_rate=0.0001
-max_iterations=10
+max_iterations=400
 x = np.array([32.50234527, 53.42680403, 61.53035803, 47.47563963, 59.81320787,
   55.14218841, 52.21179669, 39.29956669, 48.10504169, 52.55001444,
   45.41973014, 54.35163488, 44.1640495 , 58.16847072, 56.72720806,

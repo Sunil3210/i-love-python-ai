@@ -50,6 +50,7 @@ print("data",data)
 # display the value of predicted coefficients
 print(w1,w0)
 
+print(z)
 plt.scatter(x, y, label='Observed Value')
 plt.plot(x, y_hat, label='Predicted Value', color='red')
 plt.xlabel('<--X-Axis-->')
